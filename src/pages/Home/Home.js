@@ -42,7 +42,11 @@ class Home extends React.Component {
       [key + 'Pokemon']: ''
     })
     // API.getPokemon(pokemon)
-    fetch(`https://pokebx.herokuapp.com/api/v1/pokemon/${pokemon}`)
+    fetch(`https://pokebx.herokuapp.com/api/v1/pokemon/${pokemon}`, {
+      headers: {
+        'Access-Control-Allow-Origin': '*'
+      }
+    })
     .then((response) => {
       if (response && response.status === 200) {
         console.log(response)
