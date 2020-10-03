@@ -4,7 +4,11 @@ export default {
   getPokemon: (pokemon) => {
     return new Promise((resolve, reject) => {
       console.log("fffffffff")
-      index.get(`https://pokebx.herokuapp.com/api/v1/pokemon/${pokemon}`)
+      index.get(`https://pokebx.herokuapp.com/api/v1/pokemon/${pokemon}`, {
+	headers: {
+	  'Access-Control-Allow-Origin': '*'
+	}
+      })
         .then(response => {
           console.log(response)
           resolve(response)
