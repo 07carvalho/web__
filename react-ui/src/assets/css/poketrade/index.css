@@ -1,0 +1,35 @@
+body {
+    background-color: #FFDE00;
+}
+
+.message-wrapper {
+    padding: 64px;
+    margin-top: 24px;
+    text-align: center;
+    background-color: #f4f5f7;
+    border-radius: 8px;
+}
+
+.message-wrapper h4 {
+    color: #172b4d;
+}
+
+button.btn-primary {
+    background-color: #3B4CCA;
+    border: #3B4CCA;
+}
+
+.poke-card {
+    position: relative;
+}
+
+.poke-card .remove-btn {
+    position: absolute;
+    top: 8px;
+    right: 1px;
+    display: none;
+}
+
+.poke-card:hover .remove-btn {
+    display: block;
+}
