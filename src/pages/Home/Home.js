@@ -42,8 +42,10 @@ class Home extends React.Component {
       [key + 'Pokemon']: ''
     })
     // API.getPokemon(pokemon)
-    fetch(`https://pokebx.herokuapp.com/api/v1/pokemon/${pokemon}`, {
+    fetch('https://pokebx.herokuapp.com/api/v1/pokemon/eevee', {
+      method: 'GET',
       headers: {
+        "Content-Type": "application/json",
         'Access-Control-Allow-Origin': '*'
       }
     })
