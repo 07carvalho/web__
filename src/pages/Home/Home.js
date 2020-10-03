@@ -37,7 +37,7 @@ class Home extends React.Component {
 
   getPokemon = event => {
     const key = event.target.getAttribute('data-type');
-    const pokemon = this.state[key + 'Pokemon'];
+    // const pokemon = this.state[key + 'Pokemon'];
     this.setState({
       [key + 'Pokemon']: ''
     })
