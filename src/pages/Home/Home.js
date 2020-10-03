@@ -43,11 +43,7 @@ class Home extends React.Component {
     })
     // API.getPokemon(pokemon)
     fetch('https://pokebx.herokuapp.com/api/v1/pokemon/eevee', {
-      method: 'GET',
-      headers: {
-        "Content-Type": "application/json",
-        'Access-Control-Allow-Origin': '*'
-      }
+      method: 'GET'
     })
     .then((response) => {
       if (response && response.status === 200) {
