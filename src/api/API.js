@@ -19,7 +19,7 @@ export default {
   },
   postEvaluation: (data) => {
     return new Promise((resolve, reject) => {
-      index.post('/api/v1/evaluation', data)
+      index.post('https://pokebx.herokuapp.com/api/v1/evaluation', data)
         .then(response => {
           resolve(response)
         })
