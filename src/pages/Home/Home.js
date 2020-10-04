@@ -37,14 +37,11 @@ class Home extends React.Component {
 
   getPokemon = event => {
     const key = event.target.getAttribute('data-type');
-    // const pokemon = this.state[key + 'Pokemon'];
+    const pokemon = this.state[key + 'Pokemon'];
     this.setState({
       [key + 'Pokemon']: ''
     })
-    // API.getPokemon(pokemon)
-    fetch('https://pokebx.herokuapp.com/api/v1/pokemon/eevee', {
-      method: 'GET'
-    })
+    API.getPokemon(pokemon)
     .then((response) => {
       if (response && response.status === 200) {
         console.log(response)
